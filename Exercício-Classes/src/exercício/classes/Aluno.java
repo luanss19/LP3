@@ -21,7 +21,13 @@ public class Aluno extends Pessoa{
         super(nome,cpf);
         this.matricula= matricula;
     }
+    
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        System.out.println("Matrícula: " + this.matricula);
         
+}
     public void setMatricula(int mat){
         this.matricula=mat;
     }
