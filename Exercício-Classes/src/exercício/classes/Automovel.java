@@ -14,6 +14,7 @@ public class Automovel  {
     protected String placa;
     protected String cor;
     protected String modelo;
+    protected Instrutor instrutor;
 
     public Automovel(){
         this.placa= "";
@@ -31,7 +32,6 @@ public class Automovel  {
         System.out.println("Placa: "+ this.placa);
         System.out.println("Cor: "+ this.cor);
         System.out.println("Modelo: "+ this.modelo);
-        
     }
     public String getPlaca(){
         return this.placa;
@@ -56,5 +56,5 @@ public class Automovel  {
     public void setModelo(String modelo){
         this.modelo=modelo;
     }
-
-}
+    
+ }

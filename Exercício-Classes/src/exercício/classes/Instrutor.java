@@ -12,6 +12,7 @@ package exercício.classes;
 public class Instrutor extends Pessoa{
     private int codInstrutor;
     private int horasSemanais;
+    protected Automovel automovel;
     
     public Instrutor(){
         this.codInstrutor= 0;
