@@ -43,6 +43,6 @@ public class Moto extends Automovel implements Tipo{
 
     @Override
     public void NumCavalos(int numCavalos) {
-        System.out.println("Insira a potência da moto em Cilindradas");
+        System.out.println("Por favor insira a potência da moto em Cilindradas");
     }
 }
