@@ -11,11 +11,14 @@ package exercício.classes;
  */
 public class ExercícioClasses {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+      Moto auto1 = new Moto();
+      Carro carro1 = new Carro();
+      
+      carro1.NumPneus(4);
+      auto1.NumCavalos(50);
+
+      
+    }
 }

@@ -9,35 +9,19 @@ package exercício.classes;
  *
  * @author Luan
  */
-public class Aluno {
-    String nome;
-    String cpf;
-    int matricula;
+public class Aluno extends Pessoa{
     
+    private int matricula;
     
     public Aluno(){
-        this.nome= "";
-        this.cpf= "00.000.000-00";
         this.matricula= 0;
-       
     }
     
-    public String getNome(){
-        return this.nome;
+    public Aluno( String nome, String cpf,int matricula){
+        super(nome,cpf);
+        this.matricula= matricula;
     }
-    
-    public void setNome(String nome){
-        this.nome=nome;
-    }
-    
-    public String getCPF(){
-        return this.cpf;
-    }
-    
-    public void setCPF(String cpf){
-        this.cpf=cpf;
-    }
-
+        
     public void setMatricula(int mat){
         this.matricula=mat;
     }

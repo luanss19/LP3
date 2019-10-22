@@ -9,6 +9,6 @@ package exercício.classes;
  *
  * @author Luan
  */
-public class Atendente {
+public class Atendente extends Pessoa{
     
 }
