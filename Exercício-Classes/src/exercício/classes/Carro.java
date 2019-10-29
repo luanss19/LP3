@@ -9,7 +9,7 @@ package exercício.classes;
  *
  * @author Luan
  */
-public class Carro extends Automovel implements Tipo{
+public class Carro extends Automovel{
     
     private int numPortas;
     
@@ -18,12 +18,10 @@ public class Carro extends Automovel implements Tipo{
     }
     
     public Carro(String placa, String modelo, String cor,int numPortas, int numCavalos, int numPneus){
-        super(cor,modelo,placa);
+        super(placa,modelo,cor,numPneus,numCavalos);
         this.numPortas=numPortas;
-        this.modelo=modelo;
-        this.NumCavalos(numCavalos);
-        this.NumPneus(numPneus);
-}
+    }
+    
     @Override
     public void imprimir(){
         super.imprimir();
@@ -38,13 +36,4 @@ public class Carro extends Automovel implements Tipo{
         return this.numPortas;
     }
     
-    @Override
-    public void NumPneus(int numPneus) {
-        System.out.println("Número de Pneus : "+numPneus);
-    }
-
-    @Override
-    public void NumCavalos(int numCavalos) {
-        System.out.println("Número de Cavalos : "+numCavalos);
-    }
 }

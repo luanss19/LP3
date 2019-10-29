@@ -9,18 +9,17 @@ package exercício.classes;
  *
  * @author Luan
  */
-public class Moto extends Automovel implements Tipo{
+public class Moto extends Automovel {
     private int numCilindradas;
     
     public Moto(){
         this.numCilindradas=0;
     }
     
-    public Moto(String placa, String modelo, String cor,int numCilindradas, int numPneus){
-        super(cor,modelo,placa);
+    public Moto(String placa, String modelo, String cor,int numCilindradas, int numPneus,int numCavalos){
+        super(cor,modelo,placa,numPneus,numCavalos);
         this.numCilindradas=numCilindradas;
         this.modelo=modelo;
-        this.NumPneus(numPneus);
 }
     @Override
     public void imprimir(){
@@ -36,13 +35,4 @@ public class Moto extends Automovel implements Tipo{
         return this.numCilindradas;
     }
     
-    @Override
-    public void NumPneus(int numPneus) {
-        System.out.println("Número de Pneus : "+numPneus);
-    }
-
-    @Override
-    public void NumCavalos(int numCavalos) {
-        System.out.println("Por favor insira a potência da moto em Cilindradas");
-    }
 }

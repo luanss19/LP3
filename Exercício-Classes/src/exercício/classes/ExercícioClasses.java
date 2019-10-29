@@ -5,6 +5,8 @@
  */
 package exercício.classes;
 
+import java.util.Vector;
+
 /**
  *
  * @author Luan
@@ -17,10 +19,18 @@ public class ExercícioClasses {
      Instrutor Instrutor1 = new Instrutor();
      Atendente Atendente1 = new Atendente();
      
-     Carro Carro1 = new Carro();
+     
      Moto Moto1 = new Moto();
      Onibus Onibus1 = new Onibus();
      
+     Vector carros = new Vector();
+     carros.add(new Carro("III9966","Brasilia","Azul",4,4,100));
+     carros.add(new Carro("Verde","Chevete","I123SD6",100,5,4));
+     for(int i=0; i<carros.size(); i++){
+     Carro c = (Carro) carros.get(i);
+     c.imprimir();
+         System.out.println("");
+     }
      Aluno1.setNome("Carlos");
      Aluno1.setCpf("123.456.789-00");
      Aluno1.setMatricula(15);
@@ -44,13 +54,6 @@ public class ExercícioClasses {
      
      System.out.println("");
      
-     Carro1.setCor("Verde");
-     Carro1.setModelo("Uno");
-     Carro1.setPlaca("ABC-123");
-     Carro1.setNumPortas(4);
-     Carro1.NumPneus(4);
-     Carro1.NumCavalos(100);
-     Carro1.imprimir();
      
      System.out.println("");
      

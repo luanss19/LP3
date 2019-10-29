@@ -32,6 +32,14 @@ public class Instrutor extends Pessoa{
         System.out.println("Código do Instrutor: " + this.codInstrutor);
         System.out.println("Horas de Serviço por semana : " + this.horasSemanais);
 }
+
+    public Automovel getAutomovel() {
+        return automovel;
+    }
+
+    public void setAutomovel(Automovel automovel) {
+        this.automovel = automovel;
+    }
         
     public void setCodInstrutor(int codInstrutor){
         this.codInstrutor=codInstrutor;
