@@ -12,22 +12,33 @@ package exercício.classes;
 public abstract class Pessoa {
     
     protected String nome;
-    protected String cpf;
+    protected Endereco endereco;
+    protected String telefone;
+
 
 
     public Pessoa(){
         this.nome= "";
-        this.cpf= "00.000.000-00";
+        this.endereco= new Endereco();
+        this.telefone = "";
     }
     
-    public Pessoa(String nome, String cpf){
+    public Pessoa(String nome,String telefone){
         this.nome= nome;
-        this.cpf= cpf;
+        this.endereco = new Endereco();
+        this.telefone = telefone;
+    }
+    
+    public Pessoa(String nome,String telefone , Endereco endereco ){
+        this.nome= nome;
+        this.endereco= new Endereco();
+        this.telefone =telefone;
     }
     
     public void imprimir(){
         System.out.println("Nome : "+this.nome);
-        System.out.println("Cpf : "+this.cpf);
+        System.out.println("Endereco : "+this.endereco);
+        System.out.println("Telefone :"+this.telefone);
     }
     
     public String getNome(){
@@ -38,11 +49,19 @@ public abstract class Pessoa {
         this.nome=nome;
     }
     
-    public String getCpf(){
-        return this.cpf;
+    public Endereco getEndereco(){
+        return this.endereco;
     }
     
-    public void setCpf(String cpf){
-        this.cpf=cpf;
+    public void setEndereco(Endereco endereco){
+        this.endereco=endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

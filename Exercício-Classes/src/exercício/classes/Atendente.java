@@ -19,8 +19,15 @@ public class Atendente extends Pessoa{
         
     }
     
-    public Atendente( String nome, String cpf,int codAtendente,String salario){
-        super(nome,cpf);
+    public Atendente( String nome,String telefone,int codAtendente,String salario){
+        super(nome, telefone);
+        this.codAtendente= codAtendente;
+        this.salario=salario;
+    }
+    
+    public Atendente( String nome,String telefone, Endereco endereco,int codAtendente,String salario){
+        super(nome, telefone);
+        this.endereco=new Endereco();
         this.codAtendente= codAtendente;
         this.salario=salario;
     }

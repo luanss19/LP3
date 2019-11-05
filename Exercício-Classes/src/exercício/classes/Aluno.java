@@ -17,8 +17,15 @@ public class Aluno extends Pessoa{
         this.matricula= 0;
     }
     
-    public Aluno( String nome, String cpf,int matricula){
-        super(nome,cpf);
+    public Aluno( String nome,String telefone,int matricula){
+        super(nome, telefone);
+        this.matricula= matricula;
+        this.endereco=new Endereco();
+    }
+    
+    public Aluno( String nome, Endereco endereco,String telefone,int matricula){
+        super(nome, telefone);
+        this.endereco=new Endereco();
         this.matricula= matricula;
     }
     

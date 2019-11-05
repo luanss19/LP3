@@ -19,9 +19,14 @@ public class Instrutor extends Pessoa{
         this.horasSemanais=0;
         
     }
-    
-    public Instrutor( String nome, String cpf,int codInstrutor,int horasSemanais){
-        super(nome,cpf);
+    public Instrutor( String nome,String telefone, int codInstrutor,int horasSemanais){
+        super(nome, telefone);
+        this.codInstrutor= codInstrutor;
+        this.horasSemanais=horasSemanais;
+    }
+    public Instrutor( String nome,String telefone,Endereco endereco, int codInstrutor,int horasSemanais){
+        super(nome, telefone);
+        this.endereco=new Endereco();
         this.codInstrutor= codInstrutor;
         this.horasSemanais=horasSemanais;
     }
