@@ -37,8 +37,8 @@ public abstract class Pessoa {
     
     public void imprimir(){
         System.out.println("Nome : "+this.nome);
-        System.out.println("Endereco : "+this.endereco.getEndereco());
         System.out.println("Telefone :"+this.telefone);
+        System.out.println(this.endereco.getEndereco());
     }
     
     public String getNome(){
@@ -64,4 +64,6 @@ public abstract class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    
+    
 }

@@ -28,7 +28,13 @@ public class Endereco {
     }
     
     public String getEndereco(){
-        return "Cidade : "+this.cidade+" Estado : "+this.estado+" Logradouro : "+this.logradouro;
+        return "Cidade : "+this.cidade+"\nEstado : "+this.estado+"\nLogradouro : "+this.logradouro;
+    }
+    
+    public void setEndereco(String cidade, String logradouro, String estado){
+        this.cidade=cidade;
+        this.estado=estado;
+        this.logradouro=logradouro;
     }
  
     

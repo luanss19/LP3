@@ -20,7 +20,7 @@ public class ExercícioClasses {
      Moto Moto1 = new Moto();
      Onibus Onibus1 = new Onibus();
      
-     Vector carros = new Vector();
+     Vector<Automovel> carros = new Vector();
      carros.add(new Carro("III9966","Brasilia","Azul",4,4,100));
      carros.add(new Carro("I123SD6","Chevete","Verde",100,5,4));
      for(int i=0; i<carros.size(); i++){
@@ -30,9 +30,10 @@ public class ExercícioClasses {
      }
      
      System.out.println("");
-     Vector alunos = new Vector();
+     Vector<Pessoa> alunos = new Vector();
      alunos.add(new Aluno("Joao","999223312",4));
-    // alunos.add(new Aluno("I123SD6","Chevete","Verde",100,5,4));
+     alunos.lastElement().endereco.setEndereco("Camaqua","Rua Osorio" ,"RS");
+     // alunos.add(new Aluno("I123SD6","Chevete","Verde",100,5,4));
      for(int i=0; i<alunos.size(); i++){
      Aluno c = (Aluno) alunos.get(i);
      c.imprimir();
