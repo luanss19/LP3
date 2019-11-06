@@ -31,13 +31,13 @@ public abstract class Pessoa {
     
     public Pessoa(String nome,String telefone , Endereco endereco ){
         this.nome= nome;
-        this.endereco= new Endereco();
+        this.endereco= endereco;
         this.telefone =telefone;
     }
     
     public void imprimir(){
         System.out.println("Nome : "+this.nome);
-        System.out.println("Endereco : "+this.endereco);
+        System.out.println("Endereco : "+this.endereco.getEndereco());
         System.out.println("Telefone :"+this.telefone);
     }
     

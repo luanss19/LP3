@@ -9,7 +9,7 @@ package exercício.classes;
  *
  * @author Luan
  */
-public class Automovel implements Tipo {
+public abstract class Automovel implements Tipo {
     
     protected String placa;
     protected String cor;

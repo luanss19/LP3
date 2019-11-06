@@ -14,30 +14,7 @@ public class Endereco {
     public String cidade;
     public String estado;
 
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-    
+       
     public Endereco(){
         this.cidade="";
         this.estado="";
@@ -49,7 +26,10 @@ public class Endereco {
         this.estado=estado;
         this.logradouro=logradouro;
     }
-
-  
+    
+    public String getEndereco(){
+        return "Cidade : "+this.cidade+" Estado : "+this.estado+" Logradouro : "+this.logradouro;
+    }
+ 
     
 }
