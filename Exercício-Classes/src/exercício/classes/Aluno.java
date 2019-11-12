@@ -5,6 +5,8 @@
  */
 package exercício.classes;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luan
@@ -35,6 +37,14 @@ public class Aluno extends Pessoa{
         System.out.println("Matrícula: " + this.matricula);
         
 }
+    @Override
+    public void inserirDados(){
+        super.inserirDados();
+        Scanner read = new Scanner(System.in);
+        System.out.println("Numero da matrícula : ");
+        this.matricula = read.nextInt();
+    }
+    
     public void setMatricula(int mat){
         this.matricula=mat;
     }

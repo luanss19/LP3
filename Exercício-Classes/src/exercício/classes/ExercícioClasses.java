@@ -6,6 +6,7 @@
 package exercício.classes;
 
 import java.util.Vector;
+import java.util.Scanner;
 
 /**
  *
@@ -14,31 +15,29 @@ import java.util.Vector;
 public class ExercícioClasses {
 
     public static void main(String[] args) {
-        
-      
-     
-     Moto Moto1 = new Moto();
-     Onibus Onibus1 = new Onibus();
-     
-     Vector<Automovel> carros = new Vector();
-     carros.add(new Carro("III9966","Brasilia","Azul",4,4,100));
-     carros.add(new Carro("I123SD6","Chevete","Verde",100,5,4));
-     for(int i=0; i<carros.size(); i++){
-     Carro c = (Carro) carros.get(i);
-     c.imprimir();
-     System.out.println("");
-     }
-     
-     System.out.println("");
-     Vector<Pessoa> alunos = new Vector();
-     alunos.add(new Aluno("Joao","999223312",4));
-     alunos.lastElement().endereco.setEndereco("Camaqua","Rua Osorio" ,"RS");
-     // alunos.add(new Aluno("I123SD6","Chevete","Verde",100,5,4));
-     for(int i=0; i<alunos.size(); i++){
-     Aluno c = (Aluno) alunos.get(i);
-     c.imprimir();
-     System.out.println("");
-     }
+
+        Scanner read = new Scanner(System.in);
+        int op = 0;
+
+//     Vector<Automovel> carros = new Vector();
+//     carros.add(new Carro("III9966","Brasilia","Azul",4,4,100));
+//     carros.add(new Carro("I123SD6","Chevete","Verde",100,5,4));
+//     for(int i=0; i<carros.size(); i++){
+//     Carro c = (Carro) carros.get(i);
+//     c.imprimir();
+//     System.out.println("");
+//     }
+//     
+//     System.out.println("");
+        Vector<Pessoa> alunos = new Vector();
+        alunos.add(new Aluno("Joao", "999223312", 4));
+        alunos.lastElement().endereco.setEndereco("Camaqua", "Rua Osorio", "RS");
+//     // alunos.add(new Aluno("I123SD6","Chevete","Verde",100,5,4));
+//     for(int i=0; i<alunos.size(); i++){
+//     Aluno c = (Aluno) alunos.get(i);
+//     c.imprimir();
+//     System.out.println("");
+//     }
 //     
 //     Moto1.setCor("Azul");
 //     Moto1.setModelo("CB-300");
@@ -57,5 +56,34 @@ public class ExercícioClasses {
 //     Onibus1.NumPneus(6);
 //     Onibus1.NumCavalos(150);
 //     Onibus1.imprimir(); 
+        do {
+            System.out.println("");
+            System.out.println("Selecione uma opção:");
+            System.out.println("1- Cadastrar Alunos");
+            System.out.println("2- Cadastrar Automóveis");
+            System.out.println("3- Listar ");
+            System.out.println("Digite qualquer outro numero para sair");
+            System.out.println("");
+
+            op = read.nextInt();
+            switch (op) {
+                case 1:
+                    Aluno aluno = new Aluno();
+                    aluno.inserirDados();
+                    aluno.endereco.inserirEndereco();
+                    alunos.add(aluno);
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    for (int i = 0; i < alunos.size(); i++) {
+                        Aluno c = (Aluno) alunos.get(i);
+                        c.imprimir();
+                        System.out.println("");
+                    }
+                    break;
+            }
+        } while (op > 0 && op < 4);
     }
 }

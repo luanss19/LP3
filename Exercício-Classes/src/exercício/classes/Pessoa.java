@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package exercício.classes;
+import java.util.Scanner;
 
 /**
  *
@@ -38,7 +39,7 @@ public abstract class Pessoa {
     public void imprimir(){
         System.out.println("Nome : "+this.nome);
         System.out.println("Telefone :"+this.telefone);
-        System.out.println(this.endereco.getEndereco());
+        System.out.println(this.endereco.toString());
     }
     
     public String getNome(){
@@ -65,5 +66,12 @@ public abstract class Pessoa {
         this.telefone = telefone;
     }
     
+    public void inserirDados(){
+            Scanner read = new Scanner(System.in);
+            System.out.println("Nome : ");
+            this.nome = read.next();
+            System.out.println("Numero de Telefone : ");
+            this.telefone = read.next();    
+    }
     
 }

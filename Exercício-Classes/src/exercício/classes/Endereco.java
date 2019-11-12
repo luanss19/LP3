@@ -5,6 +5,8 @@
  */
 package exercício.classes;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luan
@@ -27,7 +29,8 @@ public class Endereco {
         this.logradouro=logradouro;
     }
     
-    public String getEndereco(){
+    @Override
+    public String toString(){
         return "Cidade : "+this.cidade+"\nEstado : "+this.estado+"\nLogradouro : "+this.logradouro;
     }
     
@@ -36,6 +39,15 @@ public class Endereco {
         this.estado=estado;
         this.logradouro=logradouro;
     }
- 
     
+    public void inserirEndereco(){
+        Scanner read = new Scanner(System.in);
+        System.out.println("Cidade : ");
+        this.cidade=read.next();
+        System.out.println("Estado : ");
+        this.estado=read.next();
+        System.out.println("Logradouro : ");
+        this.logradouro=read.next();
+        
+    }    
 }
