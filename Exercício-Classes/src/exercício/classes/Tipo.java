@@ -10,8 +10,9 @@ package exercício.classes;
  * @author Luan
  */
 public interface Tipo {
-    
-     void NumPneus(int numPneus);
-     void NumCavalos(int numCavalos);
-   
+
+    void NumPneus(int numPneus);
+
+    void NumCavalos(int numCavalos);
+
 }
